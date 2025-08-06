@@ -11,6 +11,21 @@
 
 ---
 
+## 📂 레포지토리 구조
+
+| 레포 | 설명 | 링크 |
+|------|------|------|
+| **compensaTX-BE** | Backend API 서버 (오케스트레이션, 트랜잭션 흐름 제어) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-BE) |
+| **compensaTX-FE** | Frontend (Vue.js 기반 UI) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-FE) |
+| **compensaTX-api-krw** | 원화(KRW) 계좌 API 서버 (Oracle 기반) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-api-krw) |
+| **compensaTX-api-oehwa** | 외화(OEHW) 계좌 API 서버 (MySQL 기반) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-api-oehwa) |
+| **compensaTX-consumer-krw** | 원화(KRW) Kafka 컨슈머 (고가용성 인스턴스 2개) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-krw) |
+| **compensaTX-consumer-oehwa** | 외화(OEHW) Kafka 컨슈머 (고가용성 인스턴스 2개) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-oehwa) |
+| **compensaTX-consumer-dlq** | DLQ 전용 Kafka 컨슈머 (보상 트랜잭션 재시도/복구) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-dlq) |
+| **.github** | GitHub Actions 및 워크플로 설정 저장소 | [🔗 바로가기](https://github.com/Woori-compensaTX/.github) |
+
+---
+
 ## 아키텍처
 
 ```
@@ -112,22 +127,6 @@
 ### 5. 트랜잭셔널 메시징
 
 - **환전 실패 처리 + 보상 메시지 발행**을 원자적으로 처리 (Kafka Producer DLQ 활용)
-
----
-
-## 📂 레포지토리 구조
-
-| 레포 | 설명 | 링크 |
-|------|------|------|
-| **compensaTX-BE** | Backend API 서버 (오케스트레이션, 트랜잭션 흐름 제어) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-BE) |
-| **compensaTX-FE** | Frontend (Vue.js 기반 UI) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-FE) |
-| **compensaTX-api-krw** | 원화(KRW) 계좌 API 서버 (Oracle 기반) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-api-krw) |
-| **compensaTX-api-oehwa** | 외화(OEHW) 계좌 API 서버 (MySQL 기반) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-api-oehwa) |
-| **compensaTX-consumer-krw** | 원화(KRW) Kafka 컨슈머 (고가용성 인스턴스 2개) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-krw) |
-| **compensaTX-consumer-oehwa** | 외화(OEHW) Kafka 컨슈머 (고가용성 인스턴스 2개) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-oehwa) |
-| **compensaTX-consumer-dlq** | DLQ 전용 Kafka 컨슈머 (보상 트랜잭션 재시도/복구) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-dlq) |
-| **.github** | GitHub Actions 및 워크플로 설정 저장소 | [🔗 바로가기](https://github.com/Woori-compensaTX/.github) |
-
 
 ---
 
