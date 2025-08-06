@@ -115,29 +115,20 @@
 
 ---
 
-## 레포지토리 구조
+## 📂 레포지토리 구조
 
-- `oehwa_consumer_mysql`: 외화 계좌(MySQL) 컨슈머
-- `kwd_consumer_oracle`: 원화 계좌(Oracle) 컨슈머
-- `dlq-server`: Dead Letter Queue, 보상 트랜잭션/재시도/복구 담당
-- `Oehwa_Mysql`: 외화 DB 전용 엔티티/쿼리
-- `oehwa_by_mysql`: 외화 서버 구현체 (MSA)
-- `kwd_by_oracle`: 원화 서버 구현체 (MSA)
-- `compensaTX-FE`: 환전 시스템 프론트엔드(Vue)
+| 레포 | 설명 | 링크 |
+|------|------|------|
+| **compensaTX-BE** | Backend API 서버 (오케스트레이션, 트랜잭션 흐름 제어) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-BE) |
+| **compensaTX-FE** | Frontend (Vue.js 기반 UI) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-FE) |
+| **compensaTX-api-krw** | 원화(KRW) 계좌 API 서버 (Oracle 기반) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-api-krw) |
+| **compensaTX-api-oehwa** | 외화(OEHW) 계좌 API 서버 (MySQL 기반) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-api-oehwa) |
+| **compensaTX-consumer-krw** | 원화(KRW) Kafka 컨슈머 (고가용성 인스턴스 2개) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-krw) |
+| **compensaTX-consumer-oehwa** | 외화(OEHW) Kafka 컨슈머 (고가용성 인스턴스 2개) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-oehwa) |
+| **compensaTX-consumer-dlq** | DLQ 전용 Kafka 컨슈머 (보상 트랜잭션 재시도/복구) | [🔗 바로가기](https://github.com/Woori-compensaTX/compensaTX-consumer-dlq) |
+| **.github** | GitHub Actions 및 워크플로 설정 저장소 | [🔗 바로가기](https://github.com/Woori-compensaTX/.github) |
 
----
 
-## 실행 방법
-
-```bash
-# Kafka, Zookeeper, 각 DB 인스턴스 실행
-
-# 각 서비스별 환경변수/설정 참고
-# 서버/컨슈머 별로 개별 실행
-./gradlew bootRun
-
-# Kafka 토픽(환전, 보상, DLQ, 딜레이 등) 자동 생성됨
-```
 ---
 
 ## 🛠️ Trouble Shooting
