@@ -11,6 +11,15 @@
 
 ---
 
+## **👥 팀원 소개**
+
+| <img width="150px" src="https://avatars.githubusercontent.com/u/52108628?v=4"/> | <img width="150px" src="https://avatars.githubusercontent.com/u/76148385?v=4"/> | <img width="150px" src="https://avatars.githubusercontent.com/u/56614731?v=4"/> | <img width="150px" src="https://avatars.githubusercontent.com/u/87272634?v=4"/> |
+| --- | --- | --- | --- |
+| **고태우** | **이제현** | **이용훈** | **장송화** |
+| [@kohtaewoo](https://github.com/kohtaewoo) | [@lyjh98](https://github.com/lyjh98) | [@dldydgns](https://github.com/dldydgns) | [@songhajang](https://github.com/songhajang) |
+| Kafka consumer | 외화(OEHWA) 계좌 API 서버 | 오케스트레이션 API 서버 | 프론트엔드 UI <br> 원화(KRW) 계좌 API 서버 |
+
+
 ## 📂 레포지토리 구조
 
 | 레포 | 설명 | 링크 |
